@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trần Thị Cẩm Tiên - Giới thiệu</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <style>
+    body {
+      font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+      /* --- BACKGROUND đã chỉnh nhỏ lại để thấy mặt --- */
+      background-image:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("Hình 1.jpg");
+
+      background-size: contain;           /* ảnh không bị cắt mặt */
+      background-position: top center;    /* đưa mặt lên vị trí chuẩn */
+      background-repeat: no-repeat;
+      background-color: #0e172a;          /* nền phía dưới */
+      background-attachment: fixed;
+
+      color: #e2e8f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      backdrop-filter: blur(16px);
+    }
+
+    .accent-gradient {
+      background: linear-gradient(135deg, #7c3aed, #ec4899);
+    }
+
+    .floating {
+      animation: float 8s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    @media (max-width: 1024px) {
+      .timeline::before { left: 0; }
+    }
+  </style>
+</head>
+
+<body class="min-h-screen">
+
+  <div class="relative overflow-hidden">
+
+    <!-- Header -->
+    <header class="relative z-10 max-w-6xl mx-auto px-6 pt-16 pb-10 flex flex-col gap-10 lg:flex-row lg:items-center">
+      <div class="flex-1 space-y-6">
+
+        <p class="text-pink-300 uppercase tracking-[0.4em] text-sm">FOODTECH EXPERT</p>
+
+        <h1 class="text-4xl lg:text-5xl font-semibold text-white leading-tight">
+          Thạc sĩ Trần Thị Cẩm Tiên<br>
+          <span class="text-sky-300">Chuyên gia Công nghệ Thực phẩm</span>
+        </h1>
+
+        <p class="text-lg text-slate-200 max-w-2xl">
+          Với hơn 10 năm nghiên cứu và chuyển giao công nghệ trong lĩnh vực thực phẩm sạch...
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+          <a href="#lien-he" class="px-6 py-3 bg-pink-500 hover:bg-pink-400 rounded-full font-semibold text-sm uppercase tracking-wider transition">Kết nối hợp tác</a>
+          <a href="#nghien-cuu" class="px-6 py-3 border border-white/30 rounded-full font-semibold text-sm uppercase tracking-wider hover:bg-white/10 transition">Xem dự án nổi bật</a>
+        </div>
+
+      </div>
+
+      <div class="flex-1 flex justify-center">
+        <div class="glass rounded-3xl p-6 w-full max-w-sm floating">
+          <div class="rounded-2xl h-64 accent-gradient mb-6 flex items-center justify-center text-3xl font-semibold text-white">TCT</div>
+          <div class="space-y-3 text-slate-200">
+            <div class="flex justify-between"><span>Chuyên ngành</span><span>Công nghệ Thực phẩm</span></div>
+            <div class="flex justify-between"><span>Kinh nghiệm</span><span>10+ năm</span></div>
+            <div class="flex justify-between"><span>Lĩnh vực</span><span>R&D, QA, Sustainability</span></div>
+            <div class="flex justify-between"><span>Thành viên</span><span>Hiệp hội FOOTA</span></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Nội dung chính -->
+    <main class="relative z-10 max-w-6xl mx-auto px-6 space-y-16 pb-20">
+
+      <!-- Tầm nhìn -->
+      <section id="gioi-thieu" class="glass rounded-3xl p-8 space-y-6">
+        <h2 class="text-2xl font-semibold text-white">Tầm nhìn và sứ mệnh</h2>
+        <p class="text-slate-200">
+          Trần Thị Cẩm Tiên tin rằng tương lai của thực phẩm Việt Nam...
+        </p>
+      </section>
+
+      <!-- Nghiên cứu -->
+      <section id="nghien-cuu" class="space-y-8">
+        <div class="flex items-center gap-4">
+          <span class="w-12 h-1 rounded-full bg-pink-400"></span>
+          <h2 class="text-2xl font-semibold text-white">Dự án & Nghiên cứu nổi bật</h2>
+        </div>
+      </section>
+
+      <!-- Liên hệ -->
+      <section id="lien-he" class="glass rounded-3xl p-8 grid lg:grid-cols-2 gap-8 items-center">
+        <div class="space-y-6">
+          <p class="text-sm text-slate-300 uppercase tracking-[0.5em]">KẾT NỐI</p>
+          <h2 class="text-3xl font-semibold text-white">Mời liên hệ để trao đổi hợp tác</h2>
+
+          <div class="space-y-3 text-slate-300 text-sm">
+            <p>Email: <a href="mailto:camtien.foodtech@gmail.com" class="text-pink-300">camtien.foodtech@gmail.com</a></p>
+            <p>Điện thoại: <a href="tel:+84901234567" class="text-pink-300">(+84) 901 234 567</a></p>
+          </div>
+        </div>
+
+        <form class="space-y-4">
+          <input type="text" placeholder="Tên của bạn" class="w-full px-4 py-3 rounded-2xl bg-white/10 border border-white/20 text-white">
+          <input type="text" placeholder="Tổ chức" class="w-full px-4 py-3 rounded-2xl bg-white/10 border border-white/20 text-white">
+          <textarea rows="4" placeholder="Nội dung hợp tác" class="w-full px-4 py-3 rounded-2xl bg-white/10 border border-white/20 text-white"></textarea>
+        </form>
+      </section>
+
+    </main>
+
+    <footer class="relative z-10 max-w-6xl mx-auto px-6 pb-8 text-center text-xs text-slate-300">
+      © <span id="year"></span> Trần Thị Cẩm Tiên. All rights reserved.
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
